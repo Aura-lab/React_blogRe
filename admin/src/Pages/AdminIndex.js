@@ -2,6 +2,7 @@ import React,{useState} from 'react';
 import {Route} from 'react-router-dom'
 import AddArticle from './AddArticle'
 import ArticleList from './ArticleList'
+import articleList1 from './articleList1'
 import 'antd/dist/antd.css';
 import '../static/css/AdminIndex.css';
 import { Layout, Menu, Breadcrumb } from 'antd';
@@ -69,8 +70,7 @@ function AdminIndex(props){
             <div style={{ padding: 24, background: '#fff', minHeight: 360 }}> 
                 <div>
                 <Route path="/index/" exact  component={AddArticle} />
-                <Route path="/index/add/" exact   component={AddArticle} />
-                {/* <Route path="/index/add/:id"  exact   component={AddArticle} /> */}
+                <Route path="/index/add" exact  component={AddArticle} />
                 <Route path="/index/list/" exact  component={ArticleList} />
                 </div>
             </div>

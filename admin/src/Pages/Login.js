@@ -14,6 +14,9 @@ function Login(props){
 
     const checkLogin = ()=>{
         setIsLoading(true)
+        setTimeout(()=>{
+            setIsLoading(false)
+        },1000)
 
         if(!userName){
             message.error('用户名不能为空')
@@ -42,10 +45,6 @@ function Login(props){
                 }
            }
         )
-
-        setTimeout(()=>{
-            setIsLoading(false)
-        },1000)
     }
 
 
@@ -53,7 +52,7 @@ function Login(props){
            <div className="login-div">
 
             <Spin tip="Loading..." spinning={isLoading}>
-                <Card title="Aura Blog System" bordered={true} style={{ width: 400 }} >
+                <Card title="Aura's Blog System" bordered={true} style={{ width: 400 }} >
                     <Input
                         id="userName"
                         size="large"
